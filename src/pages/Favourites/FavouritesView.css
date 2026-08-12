@@ -1,0 +1,120 @@
+.favourites {
+  padding: 2rem 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.favourites-status {
+  margin: 0 0 1.25rem;
+  color: #334155;
+  font-size: 1rem;
+}
+
+.favourites-status--error {
+  color: #ef4444;
+}
+
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+@media (max-width: 1024px) {
+  .movie-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .movie-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 520px) {
+  .movie-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.favourite-card {
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  box-shadow: 0 18px 35px rgba(15, 23, 42, 0.06);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.favourite-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 22px 50px rgba(15, 23, 42, 0.12);
+}
+
+.favourite-card__body {
+  padding: 0;
+  flex: 1;
+}
+
+.favourite-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 1.25rem 1.4rem;
+  background: #f8fafc;
+}
+
+.favourite-card__badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.45rem 0.8rem;
+  color: #0f172a;
+  background: #e0f2fe;
+  border-radius: 9999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.favourite-card__remove-button {
+  padding: 0.75rem 1rem;
+  color: #ffffff;
+  background: #ef4444;
+  border: none;
+  border-radius: 9999px;
+  cursor: pointer;
+  font-weight: 700;
+  transition:
+    background-color 0.2s ease,
+    transform 0.15s ease;
+}
+
+.favourite-card__remove-button:hover {
+  background: #dc2626;
+  transform: translateY(-1px);
+}
+
+.favourite-card__remove-button:focus-visible {
+  outline: 2px solid #ef4444;
+  outline-offset: 2px;
+}
+
+@media (max-width: 640px) {
+  .favourites {
+    padding: 1.5rem 1rem;
+  }
+
+  .favourite-card__footer {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .favourite-card__remove-button {
+    width: 100%;
+  }
+}

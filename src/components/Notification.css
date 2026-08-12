@@ -1,0 +1,54 @@
+.notification {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 1rem;
+  margin: 1rem 0;
+  border-radius: 0.75rem;
+  border: 1px solid transparent;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.08);
+}
+
+.notification--success {
+  background-color: #eff6ff;
+  border-color: #bfdbfe;
+  color: #1d4ed8;
+}
+
+.notification--error {
+  background-color: #fef2f2;
+  border-color: #fecaca;
+  color: #b91c1c;
+}
+
+.notification__body {
+  flex: 1;
+}
+
+.notification__title {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-size: 0.95rem;
+}
+
+.notification__message {
+  margin: 0;
+  font-size: 0.92rem;
+  line-height: 1.4;
+}
+
+.notification__close {
+  flex-shrink: 0;
+  border: none;
+  background: transparent;
+  color: inherit;
+  font-size: 1.25rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0;
+}
+
+.notification__close:hover {
+  opacity: 0.8;
+}
